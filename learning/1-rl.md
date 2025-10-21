@@ -1,4 +1,4 @@
-# RL Notes from David Silver's 1st Lecture
+# RL Notes: RL (David Silver, Lecture 1)
 
 # referenceed sources
 - https://davidstarsilver.wordpress.com/wp-content/uploads/2025/04/intro_rl.pdf
@@ -96,6 +96,6 @@ need to  balaance both.
 
 ## Prediction vs Control
 
-**Prediction**: given a policy, how good is it? evaluate future.
-**Control**: find the best policy. optimize.
+- **Prediction**: given a policy, how good is it? evaluate future. \
+- **Control**: find the best policy. optimize.
 

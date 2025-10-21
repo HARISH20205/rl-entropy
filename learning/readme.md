@@ -3,5 +3,5 @@ mostly one liners and equations for quick reference.
 
 ## Notes
 
-[1st Lecture Notes](1-rl.md)
-
+[1st Lecture Notes](1-rl.md)\
+[2nd Lecture Notes](2-mdp.md)
