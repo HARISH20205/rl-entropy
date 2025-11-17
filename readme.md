@@ -1,0 +1,1 @@
+Advanced Python Programming, Artificial Intelligence, Advaned Predictive Analytics, Cyber security and application security, Introduction to programming skills, Frontend design and testing, GPU Programming, Foundations of data science.
