@@ -45,3 +45,48 @@ $$ \lim\_{k\to\infty} N_k(s,a) = \infty. $$
 $$ \lim*{k\to\infty} \pi_k(a\mid s) = 1{\{a=\arg\max*{a} Q(s,a)\}}. $$
 
 - $ \epsilon$ -greedy policies with $ \epsilon_k = \frac{1}{k} $ satisfy GLIE conditions.
+
+## GLIE Monto Carlo Control
+
+- sample episodes using $ \epsilon $ -greedy policy.
+- update action-value estimates using first-visit MC method.
+  $$
+   \epsilon_k(s,a) = \frac{1}{k}
+  $$
+  $$ \pi_k \leftarrow \epsilon_k - \text{greedy policy wrt } Q_k $$
+
+## GLIE TD Control: SARSA
+
+- on-policy TD control algorithm.
+- update action-value estimates using TD(0) method.
+
+  $$
+  Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha \left[ R_{t+1} + \gamma Q(S_{t+1},A_{t+1}) - Q(S_t,A_t) \right]
+  $$
+
+$$
+      (S,A) \\
+        | \\
+        |R| \\
+        | \\
+       \downarrow\\
+      (S') \\
+      | \\
+       \downarrow\\
+      (A')
+$$
+
+### SARSA Algorithm
+
+```Initialize Q(s,a) arbitrarily for all s ∈ S, a ∈ A(s)
+for each episode:
+    initialize S
+    choose A from S using policy derived from Q (e.g., ε-greedy)
+    for each step of episode:
+        take action A, observe R, S'
+        choose A' from S' using policy derived from Q (e.g., ε-greedy)
+        Q(S,A) ← Q(S,A) + α [R + γ Q(S',A') - Q(S,A)]
+        S ← S'
+        A ← A'
+    until S is terminal
+```
